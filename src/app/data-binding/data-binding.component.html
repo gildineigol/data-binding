@@ -9,10 +9,43 @@
     <article>
         <h3>Property Binding</h3>
         <img src="{{ urlImagem }}">
-        <img [src]="urlImagem">  <!-- linha 12 mesma coisa que a 13 -->
+        <img [src]="urlImagem">  
         <img bind-src="urlImagem">
     </article>
+
+    <article>
+       
+        <h3>Class e Style Binding</h3>
+        <div>
+            Seleciona uma Clase:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+
+            <div class="alert alert-success" role="alert"></div>
+            <div class="alert alert-info" role="alert"></div>
+            <div class="alert alert-warning" role="alert"></div>   
+            <div class="alert alert-danger" role="alert"></div>
+
+
+
+        </div>
+    </article>
+
+
+                  
+                 
+
+
+
+
 
 
 
 </section>
+
+
