@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!-- <section class="property-binding">
     <article>
         <h3>Interpolation / Interpolação</h3>
         <p>String renderizada com interpolação: {{ url }}</p>
@@ -48,4 +48,35 @@
 
 </section>
 
+ -->
+<section class="event-binding">
+    <article>
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="botapClicado()" class="btn btn-primary">Me clique!</button>
+            <br><br>
 
+            <input type="text" 
+            (keyup)="onkeyUp($event)" 
+            (keyup.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarValor(campoInput.value)" 
+            #campoInput />
+
+
+
+            <p>Valor Atual: {{ valorAtual }}</p>
+            <p>Valor Atual: {{ valorSalvo }}</p>
+            <br>
+            <span 
+            (mauseover)="onMouseOverOut()" 
+            (mauseout)="onMouseOverOut()"
+            [class.highlight] = "isMouseOver">
+            Passe o mouse sobre mim
+
+
+            </span>
+
+
+        </div>
+    </article>
+</section>
